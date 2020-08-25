@@ -6,9 +6,9 @@ var chai = require('chai')
   , Batch = require('../lib/batch')
   , File = require('../lib/file');
 
-describe('Entry', function() {
-  describe('Create Entry', function() {
-    it('should create an entry successfully', function() {
+describe('Entry', function () {
+  describe('Create Entry', function () {
+    it('should create an entry successfully', function () {
       var entry = new Entry({
         receivingDFI: '081000210',
         DFIAccount: '12345678901234567',
@@ -18,13 +18,13 @@ describe('Entry', function() {
         individualName: 'Glen Selle',
         discretionaryData: 'A1'
       });
-      entry.generateString(function(string) {
+      entry.generateString(function (string) {
         console.log(string);
       });
     });
   });
-  describe('Create Entry with addenda', function() {
-    it('should create an entry with an addenda successfully', function() {
+  describe('Create Entry with addenda', function () {
+    it('should create an entry with an addenda successfully', function () {
       var entry = new Entry({
         receivingDFI: '081000210',
         DFIAccount: '12345678901234567',
@@ -52,7 +52,7 @@ describe('Entry', function() {
       expect(entry.getRecordCount()).to.equal(3);
       // expect(addenda.get('addendaSequenceNumber')).to.equal(2);
       expect(addenda.get('entryDetailSequenceNumber')).to.equal('1234567');
-      entry.generateString(function(string) {
+      entry.generateString(function (string) {
         console.log(string);
       });
     });
