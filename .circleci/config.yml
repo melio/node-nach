@@ -57,8 +57,12 @@ workflows:
     jobs:
       - test:
           context: melio-all
-
+          filters: # required since `publish` has tag filters AND requires `test`
+            tags:
+              only: /.*/
       - publish:
+          requires:
+            - test
           context: melio-all
           filters:
             tags:
