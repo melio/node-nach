@@ -2,6 +2,7 @@
   "name": "node-nach",
   "description": "nACH is a highly customizable Node.js module exposing a high & low-level API for generating ACH files for use within the ACH network",
   "version": "1.2.0",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/melio/node-nach.git"
